@@ -33,12 +33,22 @@
         <item name="android:theme">@style/DefaultSwitchCompatStyle</item>
     </style>
 
+    <!-- Default style -->
+    <style name="DefaultButtonStyle"  parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/gbp_custom_button_background</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
     <!-- Default SwitchCompat item style -->
     <style name="DefaultSwitchCompatStyle">
         <item name="colorControlActivated">@color/colorPrimary</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light" >
+        <item name="android:textColor">@android:color/white</item>
+    </style>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
 

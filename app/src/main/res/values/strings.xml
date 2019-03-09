@@ -17,7 +17,7 @@
     <string name="gbp_dl_confirm_logout_message">Are you sure you want to logout?</string>
 
     <!-- Menu text -->
-    <string name="gbp_mn_logout">Logout</string>
+    <string name="gbp_mn_logout">Log out</string>
     <string name="gbp_mn_share">Share</string>
 
     <!-- Hint text -->

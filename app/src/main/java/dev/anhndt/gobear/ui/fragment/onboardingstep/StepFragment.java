@@ -52,10 +52,10 @@ public class StepFragment extends BaseFragment {
                 mRootView = inflater.inflate(R.layout.gbp_fragment_step1, container, false);
                 break;
             case 2:
-                mRootView = inflater.inflate(R.layout.gbp_fragment_step1, container, false);
+                mRootView = inflater.inflate(R.layout.gbp_fragment_step2, container, false);
                 break;
             default:
-                mRootView = inflater.inflate(R.layout.gbp_fragment_step1, container, false);
+                mRootView = inflater.inflate(R.layout.gbp_fragment_step3, container, false);
                 break;
         }
         return mRootView;

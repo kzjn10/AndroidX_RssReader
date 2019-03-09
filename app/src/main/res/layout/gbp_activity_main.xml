@@ -20,7 +20,7 @@
             android:gravity="center"
             app:layout_collapseMode="pin"
             app:layout_scrollFlags="scroll|enterAlways"
-            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:popupTheme="@style/AppTheme.AppBarOverlay"
             app:title="@string/app_name" />
 
     </com.google.android.material.appbar.AppBarLayout>

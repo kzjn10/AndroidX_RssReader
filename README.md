@@ -12,6 +12,9 @@
    - [Glide](https://github.com/bumptech/glide)
    - [Android Jetpack](https://developer.android.com/jetpack)
    
+#Resource 
+   - [Pinterest](https://www.pinterest.com/pin/134967320069077138/)
+   
 #Ref
    - https://www.androidauthority.com/simple-rss-reader-full-tutorial-733245/
    - https://medium.com/androiddevelopers/viewmodels-a-simple-example-ed5ac416317e

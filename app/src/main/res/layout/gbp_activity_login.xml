@@ -48,7 +48,7 @@
                     android:hint="@string/gbp_hint_input_user_name"
                     android:imeOptions="actionNext"
                     android:inputType="text"
-                    android:maxLength="10"
+                    app:counterMaxLength="10"
                     android:maxLines="1" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -89,6 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/gbp_default_item_margin"
+                style="@style/DefaultButtonStyle"
                 android:text="@string/gbp_btn_login" />
         </LinearLayout>
     </ScrollView>

@@ -89,6 +89,7 @@ public class NewsDetailActivity extends BaseActivity {
             mTitle = bundle.getString(Global.ExtrasParams.TITLE);
             if (mTitle != null && mTitle.trim().length() != 0) {
                 mTvTitle.setText(mTitle);
+                mToolBar.setTitle(mTitle);
             }
 
             String publishTime = bundle.getString(Global.ExtrasParams.PUBLISH_TIME);
