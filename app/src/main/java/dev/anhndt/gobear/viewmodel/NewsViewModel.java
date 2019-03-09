@@ -16,6 +16,7 @@ import java.util.List;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+import dev.anhndt.gobear.cache.NewsLruCache;
 import dev.anhndt.gobear.entities.NewsEntity;
 
 /**
@@ -36,21 +37,47 @@ public class NewsViewModel extends ViewModel {
         return dataList;
     }
 
+    public LiveData<List<NewsEntity>> refreshNewsData() {
+        if (dataList == null) {
+            dataList = new MutableLiveData<>();
+        }
+
+        NewsLruCache.getInstance().clear();
+        loadData();
+
+        return dataList;
+    }
+
+
+    /**
+     * Do fetch data from network if  not available in cache
+     */
     private void loadData() {
 
         AsyncTask<Void, Void, List<NewsEntity>> task = new AsyncTask<Void, Void, List<NewsEntity>>() {
             @Override
             protected List<NewsEntity> doInBackground(Void... voids) {
                 List<NewsEntity> ret = null;
-                try {
-                    URL url = new URL(mRssUrl);
-                    InputStream inputStream = url.openConnection().getInputStream();
-                    ret = parseFeed(inputStream);
-                } catch (IOException e) {
-                    Log.e(TAG, "Error", e);
-                } catch (XmlPullParserException e) {
-                    Log.e(TAG, "Error", e);
-                }
+                do {
+                    try {
+                        //Get data from cache
+                        ret = NewsLruCache.getInstance().getNewsList();
+                        if (ret != null) {
+                            Log.e(TAG, "Get data from cache");
+                            break;
+                        }
+
+                        //Request via network
+                        Log.e(TAG, "Get data from network");
+                        URL url = new URL(mRssUrl);
+                        InputStream inputStream = url.openConnection().getInputStream();
+                        ret = parseFeed(inputStream);
+                    } catch (IOException e) {
+                        Log.e(TAG, "Error", e);
+                    } catch (XmlPullParserException e) {
+                        Log.e(TAG, "Error", e);
+                    }
+                } while (false);
                 return ret;
             }
 
@@ -61,15 +88,25 @@ public class NewsViewModel extends ViewModel {
                     dataList = new MutableLiveData<>();
                 }
 
-                dataList.setValue(newsEntities);
+                if (newsEntities != null && newsEntities.size() != 0) {
+                    NewsLruCache.getInstance().putNewsList((ArrayList<NewsEntity>) newsEntities);
+                    dataList.setValue(newsEntities);
+                }
             }
         };
 
         task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-
-
     }
 
+
+    /**
+     * Process raw data
+     *
+     * @param inputStream
+     * @return
+     * @throws XmlPullParserException
+     * @throws IOException
+     */
     private List<NewsEntity> parseFeed(InputStream inputStream) throws XmlPullParserException,
             IOException {
         String title = null;
@@ -107,7 +144,6 @@ public class NewsViewModel extends ViewModel {
                     }
                 }
 
-                Log.d("MyXmlParser", "Parsing name ==> " + name);
                 String result = "";
                 if (xmlPullParser.next() == XmlPullParser.TEXT) {
                     result = xmlPullParser.getText();

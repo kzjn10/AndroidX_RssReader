@@ -26,6 +26,7 @@
 
     <!-- Common message -->
     <string name="gbp_msg_user_name_empty">Please input your user name</string>
+    <string name="gbp_msg_double_tap_to_exit">Double tap to exit</string>
     <string name="gbp_msg_user_name_invalid">User name must be \"GoBear\"</string>
     <string name="gbp_msg_pwd_empty">Please input your password</string>
     <string name="gbp_msg_pwd_invalid">Password must be \"GoBearDemo\"</string>

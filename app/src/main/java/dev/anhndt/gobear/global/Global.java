@@ -26,4 +26,8 @@ public class Global {
         public static final int UNKNOWN = 2;
     }
 
+    public class LruCacheKey {
+        public static final String NEWS_LIST = "NEWS_LIST";
+    }
+
 }

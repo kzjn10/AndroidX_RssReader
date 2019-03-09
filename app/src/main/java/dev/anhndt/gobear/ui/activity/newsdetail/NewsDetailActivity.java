@@ -111,7 +111,7 @@ public class NewsDetailActivity extends BaseActivity {
             }
 
         } else {
-            ToastHelper.showNetworkError();
+            ToastHelper.show(R.string.gbp_msg_no_data);
         }
     }
 

@@ -12,6 +12,7 @@ import java.util.List;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -32,7 +33,7 @@ import dev.anhndt.gobear.utils.ToastHelper;
 import dev.anhndt.gobear.viewmodel.NewsViewModel;
 
 public class MainActivity extends BaseActivity {
-
+    private Toolbar mToolBar;
     private SwipeRefreshLayout mSrlRefreshLayout;
     private RecyclerView mRvDataList;
     private NewsAdapter mAdapter;
@@ -43,6 +44,9 @@ public class MainActivity extends BaseActivity {
     private CountDownTimer mCountDownTimer = null;
 
     private NewsViewModel mNewsViewModel;
+
+    private static final int TIME_INTERVAL = 2000;
+    private long mBackPressed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +59,9 @@ public class MainActivity extends BaseActivity {
     }
 
     private void initViews() {
+        mToolBar = findViewById(R.id.gbp_ma_tool_bar);
+        setSupportActionBar(mToolBar);
+
         mSrlRefreshLayout = findViewById(R.id.gbp_ma_srl_refresh_layout);
         mSrlRefreshLayout.setColorSchemeResources(R.color.colorAccent);
         mRvDataList = findViewById(R.id.gbp_ma_rv_data_list);
@@ -98,7 +105,7 @@ public class MainActivity extends BaseActivity {
     private void initData() {
         if (ConnectionUtils.isConnected()) {
             setViewState(Global.ScreenState.LOADING);
-            fetchData();
+            fetchData(false);
         } else {
             setViewState(Global.ScreenState.NO_CONNECTION);
         }
@@ -115,7 +122,7 @@ public class MainActivity extends BaseActivity {
 
                 @Override
                 public void onFinish() {
-                    fetchData();
+                    fetchData(true);
                 }
             };
 
@@ -126,19 +133,34 @@ public class MainActivity extends BaseActivity {
         }
     }
 
-    private void fetchData() {
-        mNewsViewModel.getNewsData().observe(this, new Observer<List<NewsEntity>>() {
-            @Override
-            public void onChanged(@Nullable List<NewsEntity> dataSet) {
-                if (dataSet != null && dataSet.size() != 0) {
-                    mAdapter.setDataSet(dataSet);
-                    setViewState(Global.ScreenState.SHOW_DATA);
-                } else {
-                    setViewState(Global.ScreenState.NO_DATA);
+    private void fetchData(boolean isRefresh) {
+        if (isRefresh) {
+            mNewsViewModel.refreshNewsData().observe(this, new Observer<List<NewsEntity>>() {
+                @Override
+                public void onChanged(@Nullable List<NewsEntity> dataSet) {
+                    if (dataSet != null && dataSet.size() != 0) {
+                        mAdapter.setDataSet(dataSet);
+                        setViewState(Global.ScreenState.SHOW_DATA);
+                    } else {
+                        setViewState(Global.ScreenState.NO_DATA);
+                    }
                 }
-            }
-        });
+            });
+        } else {
+            mNewsViewModel.getNewsData().observe(this, new Observer<List<NewsEntity>>() {
+                @Override
+                public void onChanged(@Nullable List<NewsEntity> dataSet) {
+                    if (dataSet != null && dataSet.size() != 0) {
+                        mAdapter.setDataSet(dataSet);
+                        setViewState(Global.ScreenState.SHOW_DATA);
+                    } else {
+                        setViewState(Global.ScreenState.NO_DATA);
+                    }
+                }
+            });
+        }
     }
+
 
     private void setViewState(Global.ScreenState state) {
         switch (state) {
@@ -180,9 +202,10 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.detail_menu, menu);
+        getMenuInflater().inflate(R.menu.main_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -218,6 +241,18 @@ public class MainActivity extends BaseActivity {
         });
 
         builder.show();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (mBackPressed + TIME_INTERVAL > System.currentTimeMillis()) {
+            super.onBackPressed();
+            return;
+        } else {
+           ToastHelper.show(R.string.gbp_msg_double_tap_to_exit);
+        }
+
+        mBackPressed = System.currentTimeMillis();
     }
 
     @Override
