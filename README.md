@@ -3,6 +3,11 @@
 Inline-style: 
 ![alt text](https://gitlab.com/_Joker/gobear/blob/master/app/assets/ic_launcher-web.png "Logo Title Text 1")
 
+Reference-style: 
+![alt text][logo]
+
+[logo]: https://gitlab.com/_Joker/gobear/blob/master/app/assets/ic_launcher-web.png "Logo Title Text 2"
+
 #Architecture
    - Language: Java
    - AndroidX
