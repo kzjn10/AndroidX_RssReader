@@ -17,7 +17,7 @@
 
         <activity
             android:name=".ui.activity.onboarding.OnBoardingActivity"
-            android:theme="@style/OnBoardingTheme">
+            android:theme="@style/NoActionBarTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,7 +27,9 @@
 
         <activity android:name=".ui.activity.newsdetail.NewsDetailActivity"></activity>
 
-        <activity android:name=".ui.activity.login.LoginActivity" />
+        <activity
+            android:name=".ui.activity.login.LoginActivity"
+            android:theme="@style/NoActionBarTheme" />
 
         <activity android:name=".ui.activity.main.MainActivity" />
 

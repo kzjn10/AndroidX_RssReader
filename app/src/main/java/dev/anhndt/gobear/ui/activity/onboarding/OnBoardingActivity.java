@@ -8,8 +8,10 @@ import dev.anhndt.gobear.R;
 import dev.anhndt.gobear.adapter.viewpager.OnBoardingAdapter;
 import dev.anhndt.gobear.ui.activity.base.BaseActivity;
 import dev.anhndt.gobear.ui.activity.login.LoginActivity;
+import dev.anhndt.gobear.ui.activity.main.MainActivity;
 import dev.anhndt.gobear.ui.fragment.onboardingstep.StepFragment;
 import dev.anhndt.gobear.utils.IntentUtils;
+import dev.anhndt.gobear.utils.SharedPrefUtils;
 import dev.anhndt.gobear.widget.circleindicator.CirclePageIndicator;
 
 public class OnBoardingActivity extends BaseActivity {
@@ -46,7 +48,12 @@ public class OnBoardingActivity extends BaseActivity {
         findViewById(R.id.gbp_oba_btn_skip).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                IntentUtils.startActivity(OnBoardingActivity.this, LoginActivity.class);
+                if(SharedPrefUtils.isRememberLogin()){
+                    IntentUtils.startActivity(OnBoardingActivity.this, MainActivity.class);
+                }else {
+                    IntentUtils.startActivity(OnBoardingActivity.this, LoginActivity.class);
+                }
+
                 OnBoardingActivity.this.finish();
             }
         });

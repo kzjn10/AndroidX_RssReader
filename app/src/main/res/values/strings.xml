@@ -3,5 +3,20 @@
 
     <!-- Common text -->
     <string name="gbp_common_text_skip">Skip</string>
+    <string name="gbp_common_text_remember_me">Remember me</string>
     <string name="gbp_common_default_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et venenatis nunc. Sed ornare venenatis mi vel varius. Proin eros lectus, luctus in risus id, elementum malesuada nisi. Suspendisse tincidunt posuere ipsum, eget sollicitudin elit rutrum sed. Duis vulputate, felis id malesuada condimentum, enim odio accumsan enim, quis feugiat orci dui sed nisl. Nulla augue sapien, rhoncus nec facilisis eget, accumsan eu enim. In et tincidunt turpis, non condimentum diam. Phasellus at tortor eget sem congue ullamcorper vel ut libero. Nulla egestas consequat tellus, sit amet mattis ipsum imperdiet quis.</string>
+
+    <!-- Button text -->
+    <string name="gbp_btn_login">Login</string>
+
+    <!-- Hint text -->
+    <string name="gbp_hint_input_user_name">User name</string>
+    <string name="gbp_hint_input_password">Password</string>
+
+
+    <!-- Common message -->
+    <string name="gbp_msg_user_name_empty">Please input your user name</string>
+    <string name="gbp_msg_user_name_invalid">User name must be \"GoBear\"</string>
+    <string name="gbp_msg_pwd_empty">Please input your password</string>
+    <string name="gbp_msg_pwd_invalid">Password must be \"GoBearDemo\"</string>
 </resources>

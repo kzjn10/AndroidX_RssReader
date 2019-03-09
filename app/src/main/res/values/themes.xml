@@ -30,7 +30,7 @@
     </style>
 
     <!-- OnBoarding theme. -->
-    <style name="OnBoardingTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+    <style name="NoActionBarTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <item name="android:statusBarColor">@color/colorPrimaryDark</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">true</item>

@@ -6,5 +6,9 @@ public class Global {
         public static final String STEP = "STEP";
     }
 
+    public class CacheKey {
+        public static final String REMEMBER_ME = "REMEMBER_ME";
+    }
+
 
 }
