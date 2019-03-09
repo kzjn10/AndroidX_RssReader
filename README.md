@@ -1,6 +1,6 @@
 #GoBear test project -  Documentation
 
-
+![alt text][logo]
 [logo]: https://gitlab.com/_Joker/gobear/blob/master/app/assets/ic_launcher-web.png "App icon"
 
 #Architecture
