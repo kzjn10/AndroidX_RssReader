@@ -1,7 +1,7 @@
 #GoBear test project -  Documentation
 
-![alt text][logo]
-[logo]: https://gitlab.com/_Joker/gobear/blob/master/app/assets/ic_launcher-web.png "App icon"
+Inline-style: 
+![alt text](https://gitlab.com/_Joker/gobear/blob/master/app/assets/ic_launcher-web.png "Logo Title Text 1")
 
 #Architecture
    - Language: Java
