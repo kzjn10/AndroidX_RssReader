@@ -2,6 +2,16 @@
 
 ![](https://gitlab.com/_Joker/gobear/raw/master/app/assets/ic_launcher-web.png "Logo")
 
+
+#Screen shoot
+![](https://gitlab.com/_Joker/gobear/raw/master/app/assets/device-2019-03-09-203851.png "SS1")
+![](https://gitlab.com/_Joker/gobear/raw/master/app/assets/device-2019-03-09-203917.png "SS2")
+![](https://gitlab.com/_Joker/gobear/raw/master/app/assets/device-2019-03-09-204003.png "SS3")
+![](https://gitlab.com/_Joker/gobear/raw/master/app/assets/device-2019-03-09-204030.png "SS4")
+![](https://gitlab.com/_Joker/gobear/raw/master/app/assets/device-2019-03-09-204043.png "SS5")
+![](https://gitlab.com/_Joker/gobear/raw/master/app/assets/device-2019-03-09-204057.png "SS6")
+![](https://gitlab.com/_Joker/gobear/raw/master/app/assets/device-2019-03-09-204240.png "SS7")
+
 #Architecture
    - Language: Java
    - AndroidX
