@@ -15,7 +15,10 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <TextView style="@style/TitleTextStyle" />
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@mipmap/ic_launcher" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -33,6 +36,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/gbp_la_til_user_name"
                 android:layout_width="match_parent"
+                android:padding="@dimen/gbp_default_item_padding_small"
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -47,6 +51,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/gbp_la_til_password"
                 android:layout_width="match_parent"
+                android:padding="@dimen/gbp_default_item_padding_small"
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText

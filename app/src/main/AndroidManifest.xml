@@ -5,6 +5,9 @@
 
     <dist:module dist:instant="true" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:name=".GoBearApp"
         android:allowBackup="true"
@@ -13,6 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:screenOrientation="portrait"
+        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
 
         <activity
@@ -25,7 +29,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.activity.newsdetail.NewsDetailActivity"></activity>
+        <activity android:name=".ui.activity.newsdetail.NewsDetailActivity" />
 
         <activity
             android:name=".ui.activity.login.LoginActivity"

@@ -3,4 +3,8 @@
     <color name="colorPrimary">#1DE9B6</color>
     <color name="colorPrimaryDark">#00BFA5</color>
     <color name="colorAccent">#FF6F00</color>
+
+    <color name="gbp_statusText">#777777</color>
+    <color name="gbp_newsPublishTime">#8e8d8d</color>
+    <color name="gbp_newsDescription">#686868</color>
 </resources>
