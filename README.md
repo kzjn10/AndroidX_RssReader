@@ -14,6 +14,7 @@
 
 #Note
    - Support min SDK version 21
+   - APK demo file (debug-mode) put in asset folder, you can download [here](https://github.com/bumptech/glide)
 
 #Architecture
    - Language: Java
