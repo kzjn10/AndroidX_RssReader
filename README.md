@@ -1,7 +1,7 @@
 #GoBear test project -  Documentation
 
 Inline-style: 
-![alt text](https://gitlab.com/_Joker/gobear/blob/master/app/assets/ic_launcher-web.png "Logo Title Text 1")
+![alt text](https://gitlab.com/_Joker/gobear/raw/master/app/assets/ic_launcher-web.png "Logo Title Text 1")
 
 Reference-style: 
 ![alt text][logo]
