@@ -1,14 +1,15 @@
-package dev.anhndt.gobear;
+package dev.anhndt.gobear.ui.activity.login;
 
 import androidx.appcompat.app.AppCompatActivity;
+import dev.anhndt.gobear.R;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.gbp_activity_login);
     }
 }
