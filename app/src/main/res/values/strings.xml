@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">GoBear</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Common text -->
+    <string name="gbp_common_text_skip">Skip</string>
+    <string name="gbp_common_default_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et venenatis nunc. Sed ornare venenatis mi vel varius. Proin eros lectus, luctus in risus id, elementum malesuada nisi. Suspendisse tincidunt posuere ipsum, eget sollicitudin elit rutrum sed. Duis vulputate, felis id malesuada condimentum, enim odio accumsan enim, quis feugiat orci dui sed nisl. Nulla augue sapien, rhoncus nec facilisis eget, accumsan eu enim. In et tincidunt turpis, non condimentum diam. Phasellus at tortor eget sem congue ullamcorper vel ut libero. Nulla egestas consequat tellus, sit amet mattis ipsum imperdiet quis.</string>
 </resources>

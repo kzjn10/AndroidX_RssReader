@@ -47,7 +47,18 @@ public class StepFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.gbp_fragment_step1, container, false);
+        switch (mStep) {
+            case 1:
+                mRootView = inflater.inflate(R.layout.gbp_fragment_step1, container, false);
+                break;
+            case 2:
+                mRootView = inflater.inflate(R.layout.gbp_fragment_step1, container, false);
+                break;
+            default:
+                mRootView = inflater.inflate(R.layout.gbp_fragment_step1, container, false);
+                break;
+        }
+        return mRootView;
     }
 
 }
