@@ -21,6 +21,7 @@
 
         <activity
             android:name=".ui.activity.onboarding.OnBoardingActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/NoActionBarTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,13 +30,19 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.activity.newsdetail.NewsDetailActivity" />
+        <activity
+            android:name=".ui.activity.newsdetail.NewsDetailActivity"
+            android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.activity.login.LoginActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/NoActionBarTheme" />
 
-        <activity android:name=".ui.activity.main.MainActivity" />
+        <activity
+            android:name=".ui.activity.main.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
 
 
     </application>

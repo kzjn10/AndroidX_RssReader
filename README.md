@@ -15,7 +15,8 @@
 #Note
    - Support min SDK version 21
    - APK demo file (debug-mode) put in asset folder, you can download [here](https://gitlab.com/_Joker/gobear/blob/master/app/assets/gbp_test_app_debug.apk)
-
+   - Some network provider in Vietnam deny request to BBC, so in some case can not read data from BBC 
+   
 #Architecture
    - Language: Java
    - AndroidX
