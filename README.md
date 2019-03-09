@@ -1,4 +1,4 @@
-#GoBear test project -  Documentation
+#GoBear test project &copy;2019 by AnhNDT 
 
 ![](https://gitlab.com/_Joker/gobear/raw/master/app/assets/ic_launcher-web.png "Logo")
 
@@ -14,7 +14,7 @@
 
 #Note
    - Support min SDK version 21
-   - APK demo file (debug-mode) put in asset folder, you can download [here](https://github.com/bumptech/glide)
+   - APK demo file (debug-mode) put in asset folder, you can download [here](https://gitlab.com/_Joker/gobear/blob/master/app/assets/gbp_test_app_debug.apk)
 
 #Architecture
    - Language: Java
