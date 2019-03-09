@@ -12,6 +12,9 @@
 ![](https://gitlab.com/_Joker/gobear/raw/master/app/assets/device-2019-03-09-204057.png "SS6")
 ![](https://gitlab.com/_Joker/gobear/raw/master/app/assets/device-2019-03-09-204240.png "SS7")
 
+#Note
+   - Support min SDK version 21
+
 #Architecture
    - Language: Java
    - AndroidX
