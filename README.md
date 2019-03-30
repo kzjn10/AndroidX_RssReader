@@ -1,4 +1,4 @@
-#GoBear test project &copy;2019 by AnhNDT 
+&copy;2019 by AnhNDT 
 
 ![](https://gitlab.com/_Joker/gobear/raw/master/app/assets/ic_launcher-web.png "Logo")
 
